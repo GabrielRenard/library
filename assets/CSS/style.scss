@@ -1,11 +1,121 @@
-.alert {
-  border: 1px solid black;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+// #845EC2 #B39CD0 #FBEAFF #00C9A7
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fbeaff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #fff;
+  background-color: #845ec2;
+
+  input,
+  select {
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.25s;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #00c9a7;
+      color: #fbeaff;
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border: none;
+  border-radius: 1rem;
+
+  thead > tr {
+    background-color: #845ec2;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+    border-top-left-radius: 1rem;
+  }
+
+  th,
+  td {
+    padding: 12px 15px;
+  }
+
+  th:first-child {
+    border-top-left-radius: 0.5rem;
+  }
+
+  th:last-child {
+    border-top-right-radius: 0.5rem;
+  }
+
+  tbody > tr {
+    border-bottom: 1px solid #ddd;
+    background-color: #ddd;
+  }
+  // #845EC2 #B39CD0 #FBEAFF #00C9A7
+  tbody > tr:nth-of-type(even) {
+    background-color: #b39cd0;
+  }
+
+  tbody > tr:nth-of-type(odd) {
+    color: #845ec2;
+    font-weight: bold;
+  }
+
+  tbody > tr:last-of-type {
+    border-bottom: 2px solid #845ec2;
+  }
+}
+
+// Alerts
+
+// .alert {
+//   border: 1px solid black;
+// }
+
 .danger {
-  background-color: red;
+  background: rgba(255, 0, 0, 0.2);
+  border: 2px solid red;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .success {
-  background-color: green;
+  background: rgba(0, 255, 0, 0.2);
+  border: 2px solid green;
+  text-align: center;
+  font-size: 1.2rem;
 }
