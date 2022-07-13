@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 *,
 *::before,
 *::after {
@@ -10,8 +11,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
   background-color: #fbeaff;
+  font-family: "Open Sans", sans-serif;
+}
+body .app-title {
+  color: #845ec2;
 }
 
 form {
@@ -19,12 +23,13 @@ form {
   flex-direction: column;
   padding: 2rem;
   border-radius: 1rem;
-  color: #fff;
+  color: #fbeaff;
   background-color: #845ec2;
 }
 form input,
 form select {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  padding: 0.25rem;
   border: none;
   border-radius: 0.25rem;
 }
@@ -56,7 +61,7 @@ table {
 }
 table thead > tr {
   background-color: #845ec2;
-  color: #fff;
+  color: #fbeaff;
   text-align: left;
   font-weight: bold;
   width: 100%;
@@ -77,14 +82,32 @@ table tbody > tr {
   background-color: #ddd;
 }
 table tbody > tr:nth-of-type(even) {
-  background-color: #b39cd0;
-}
-table tbody > tr:nth-of-type(odd) {
-  color: #845ec2;
-  font-weight: bold;
+  background-color: #fff;
 }
 table tbody > tr:last-of-type {
   border-bottom: 2px solid #845ec2;
+}
+table button {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.25s;
+}
+table button i {
+  color: #845ec2;
+}
+table button:hover {
+  background-color: #00c9a7;
+  color: #fff;
+}
+table button:hover i {
+  color: #fbeaff;
 }
 
 .danger {

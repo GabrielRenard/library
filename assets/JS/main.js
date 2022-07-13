@@ -53,12 +53,12 @@ class UI {
     const row = document.createElement("tr");
 
     row.innerHTML = `
-    <td>${book.title}</td>
-    <td>${book.author}</td>
-    <td>${book.pages}</td>
-    <td>${book.isRead}</td>
-    <td><button class="delete">X</button></td>
-    `;
+      <td>${book.title}</td>
+      <td>${book.author}</td>
+      <td>${book.pages}</td>
+      <td>${book.isRead}</td>
+      <td><button class="delete"><i class="fa-solid fa-trash"></i></button></td>
+      `;
 
     list.appendChild(row);
   }
@@ -77,9 +77,9 @@ class UI {
     container.appendChild(div, form);
 
     // remove alert after 3seconds
-    setTimeout(() => {
+    const alert = setTimeout(() => {
       document.querySelector(".alert").remove();
-    }, 3000);
+    }, 2000);
   }
 
   static clearInputFields() {

@@ -1,10 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-// #845EC2 #B39CD0 #FBEAFF #00C9A7
+// Variables
+$purple-light: #fbeaff;
+$purple-dark: #845ec2;
+$accent: #00c9a7;
 
 body {
   display: flex;
@@ -12,8 +17,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
-  background-color: #fbeaff;
+  background-color: $purple-light;
+  font-family: "Open Sans", sans-serif;
+
+  .app-title {
+    color: $purple-dark;
+  }
 }
 
 form {
@@ -21,12 +30,13 @@ form {
   flex-direction: column;
   padding: 2rem;
   border-radius: 1rem;
-  color: #fff;
-  background-color: #845ec2;
+  color: $purple-light;
+  background-color: $purple-dark;
 
   input,
   select {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    padding: 0.25rem;
     border: none;
     border-radius: 0.25rem;
 
@@ -45,8 +55,8 @@ form {
     font-weight: bold;
 
     &:hover {
-      background-color: #00c9a7;
-      color: #fbeaff;
+      background-color: $accent;
+      color: $purple-light;
     }
   }
 }
@@ -60,8 +70,8 @@ table {
   border-radius: 1rem;
 
   thead > tr {
-    background-color: #845ec2;
-    color: #fff;
+    background-color: $purple-dark;
+    color: $purple-light;
     text-align: left;
     font-weight: bold;
     width: 100%;
@@ -85,26 +95,42 @@ table {
     border-bottom: 1px solid #ddd;
     background-color: #ddd;
   }
-  // #845EC2 #B39CD0 #FBEAFF #00C9A7
   tbody > tr:nth-of-type(even) {
-    background-color: #b39cd0;
-  }
-
-  tbody > tr:nth-of-type(odd) {
-    color: #845ec2;
-    font-weight: bold;
+    background-color: #fff;
   }
 
   tbody > tr:last-of-type {
-    border-bottom: 2px solid #845ec2;
+    border-bottom: 2px solid $purple-dark;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.25s;
+
+    i {
+      color: $purple-dark;
+    }
+
+    &:hover {
+      background-color: $accent;
+      color: #fff;
+
+      i {
+        color: $purple-light;
+      }
+    }
   }
 }
 
 // Alerts
-
-// .alert {
-//   border: 1px solid black;
-// }
 
 .danger {
   background: rgba(255, 0, 0, 0.2);
